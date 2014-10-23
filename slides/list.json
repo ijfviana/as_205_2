@@ -63,22 +63,17 @@
 	    }
     ],
 
-    [
-	    {
-	        "filename": "connectivity.md",
-	        "attr": {
-	            "data-state": "big-title",
-	            "data-transition":"zoom"
-	        }
-	    },
-	    {
-	        "filename": "connectivity_contents.md",
-	        "attr": {
-	            "data-separator": "^\n\n\n",
-	            "data-vertical": "^\n\n"
-	        }
-	    }
-    ],
+   {
+        "filename": "biblio.md",
+        "attr": {
+            "data-state":"biblio",
+            "class":"alternatelight",
+           "data-separator": "^\n\n\n",
+            "data-vertical": "^\n\n"
+
+        }
+    },
+
     {
         "filename": "end.md",
         "attr": {

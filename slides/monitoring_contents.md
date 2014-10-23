@@ -57,14 +57,14 @@ ijfviana-dev@vagalume-dev:~$ nc -p 3133 -w 5 hostname,.com 42
   <table class="table table-condensed  table-hover table-bordered">
 <thead>
 <tr>
-<th width="250pt">Option</th>
-<th>Purpose</th>
+<th width="250pt">Opción</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>`-d`</td>
-<td>No lee de la entrada estandar.</td>
+<td>No lee de la entrada estándar</td>
 </tr>
 <tr>
 <td>`-h`</td>
@@ -72,7 +72,7 @@ ijfviana-dev@vagalume-dev:~$ nc -p 3133 -w 5 hostname,.com 42
 </tr>
 <tr>
 <td>`-i interval`</td>
-<td>Introduce un retraso entre envio y recepción de texto</td>
+<td>Introduce un retraso entre envío y recepción de texto</td>
 </tr>
 <tr>
 <td>`-k`</td>
@@ -113,8 +113,8 @@ x address [: port ] Makes a connection via the specified proxy server.
   <table class="table table-condensed  table-hover table-bordered">
 <thead>
 <tr>
-<th width="250pt">Option</th>
-<th>Purpose</th>
+<th width="250pt">Opción</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -165,8 +165,8 @@ x address [: port ] Makes a connection via the specified proxy server.
   <table class="table table-condensed  table-hover table-bordered">
 <thead>
 <tr>
-<th width="250pt">Option</th>
-<th>Purpose</th>
+<th width="250pt">Opción</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -227,8 +227,8 @@ Option Purpose
   <table class="table table-condensed  table-hover table-bordered">
 <thead>
 <tr>
-<th width="250pt">Option</th>
-<th>Purpose</th>
+<th width="250pt">Opción</th>
+<th>Descripción</th>
 </tr>
 </thead>
 <tbody>
@@ -274,7 +274,7 @@ Option Purpose
 
 * La herramienta [`Netstat`](http://www.manpagez.com/man/1/netstat/) es de diagnóstico.
 * Se considera la navaja suiza de las aplicaciones de red.
-* Permite optener información que no sería posible obtener, de forma sencilla, por otros medios.
+* Permite obtener información que no sería posible obtener, de forma sencilla, por otros medios.
 * Su sintaxis es:
 ```bash
  netstat [-AaLlnW] [-f address_family | -p protocol]
@@ -297,7 +297,7 @@ note:
 ## Netstat (II)
 ### Ejemplos (I)
 
-* Obtener estadísticas de uso de los interfaces de red (ifconfig):
+* Obtener estadísticas de uso de los interfaces de red (`ifconfig`):
 ```bash
 ijfviana-dev@vagalume-dev:~$  netstat -i
 Iface       MTU Met    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
@@ -355,15 +355,15 @@ unix  3      [ ]         FLUJO      CONECTADO     15528    763/dbus-daemon     /
 </thead>
 <tbody>
 <tr>
-<td>-a</td>
+<td>`-a`</td>
 <td>Show all info host, network, and default routes are shown.</td>
 </tr>
 <tr>
-<td>-n</td>
+<td>`-n`</td>
 <td>Show network addresses as numbers. netstat normally displays addresses as symbols. This option may be used with any of the display formats.</td>
 </tr>
 <tr>
-<td>-v</td>
+<td>`-v`</td>
 <td>Verbose. Show additional information for the sockets and the routing table.</td>
 </tr>
 </tbody>
@@ -496,7 +496,7 @@ unix  3      [ ]         FLUJO      CONECTADO     15528    763/dbus-daemon     /
 ## tcpdump
 
 * El [tcpdump](http://www.manpagez.com/man/1/tcpdump/) es un [sniffer](http://es.wikipedia.org/wiki/Analizador_de_paquetes) de paquetes
-* Los paquetes optenidos pueden ser analizados por utilidades de diagnóstico para verificar la información que transitar por la red
+* Los paquetes obtenidos pueden ser analizados por utilidades de diagnóstico para verificar la información que transitar por la red
 ```bash
 tcpdump [ -AbdDefhHIJKlLnNOpqRStuUvxX ] [ -B buffer_size ] [ -c count ]
                [ -C file_size ] [ -G rotate_seconds ] [ -F file ]
@@ -587,11 +587,9 @@ these options and for additional options.
 * Permite hacer un análisis completo de paquetes, profundizando en sus contenidos
 * Podemos usar la linea de comando o un interfaz gráfico
 
-<aside class="notes">
+note:
 * Formerly known as Ethereal, is another packet sniffer.
-* It features deep analysis of network packets, meaning that the program can help you dig into network packets to discover the
-meanings they carry.
-</aside>
+* It features deep analysis of network packets, meaning that the program can help you dig into network packets to discover the meanings they carry.
 
 
 
@@ -620,7 +618,7 @@ output, you can do so with a wide array of tshark options.
 ### Ejemplo (II)
 
 <a class="fancybox" href="img/wireshark.png" data-fancybox-group="gallery" title="Pasos para trabajar con volúmenes lógicos">
-<img height="450px" src="img/wireshark.png" alt="Pasos para trabajar con volúmenes lógicos">
+<img height="450px" src="img/wireshark.redimensionado75.png" alt="Pasos para trabajar con volúmenes lógicos">
 </a>
 
 <aside class="notes">

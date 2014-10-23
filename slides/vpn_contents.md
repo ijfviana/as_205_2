@@ -15,8 +15,8 @@ note:
 
 ## Antecedentes (I)
 
-<a class="fancybox" href="img/vpn.png" data-fancybox-group="gallery" title="Pasos para trabajar con volúmenes lógicos">
-<img height="450px" src="img/vpn.png" alt="Pasos para trabajar con volúmenes lógicos">
+<a class="fancybox" href="img/vpn.png" data-fancybox-group="gallery" title="VPN">
+<img height="450px" src="img/vpn.redimensionado50.png" alt="VPN">
 </a>
 
 [OpenVPN](http://openvpn.net)
@@ -27,16 +27,37 @@ note:
 
 
 
-## Antecendestes (II)
+## Antecedentes (II)
 
 * Rango de redes privadas usualmente usados (RFC-1918)
-
-| Class | Range                       | Prefix |
-|-------|-----------------------------|--------|
-|A      | 10.0.0.0–10.255.255.255     | 10.0.0.0/8
-|B      | 172.16.0.0.0–172.31.255.255 | 172.16.0.0/12
-|C      | 192.168.0.0–192.168.255.255 | 192.168.0.0/16
-
+<div class="table-responsive">
+<table class="table table-condensed table-hover table-bordered">
+<thead>
+<tr>
+<th>Class</th>
+<th>Range</th>
+<th>Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>10.0.0.0–10.255.255.255</td>
+<td>10.0.0.0/8</td>
+</tr>
+<tr>
+<td>B</td>
+<td>172.16.0.0.0–172.31.255.255</td>
+<td>172.16.0.0/12</td>
+</tr>
+<tr>
+<td>C</td>
+<td>192.168.0.0–192.168.255.255</td>
+<td>192.168.0.0/16</td>
+</tr>
+</tbody>
+  </table>
+</div>
 * No puede haber direcciones repetidas entre las dos redes a conectar
 
 note:
@@ -49,8 +70,8 @@ note:
 ## Gestión de claves (I)
 ###Criptografía asimétrica
 
-<a class="fancybox" href="img/privadapublicaclave.png" data-fancybox-group="gallery" title="Pasos para trabajar con volúmenes lógicos">
-<img height="450px" src="img/privadapublicaclave.png" alt="Pasos para trabajar con volúmenes lógicos">
+<a class="fancybox" href="img/privadapublicaclave.png" data-fancybox-group="gallery" title="Esquema cifrado asimétrico">
+<img height="450px" src="img/privadapublicaclave.png" alt="Esquema cifrado asimétrico">
 </a>
 
 note:
@@ -67,8 +88,8 @@ can then decrypt the data using the matched private key.
 ## Gestión de claves (II)
 ### CA, entidad autorizadora
 
-<a class="fancybox" href="img/ca.png" data-fancybox-group="gallery" title="Pasos para trabajar con volúmenes lógicos">
-<img height="450px" src="img/ca.png" alt="Pasos para trabajar con volúmenes lógicos">
+<a class="fancybox" href="img/ca.png" data-fancybox-group="gallery" title="Entidad autorizadora">
+<img height="450px" src="img/ca.png" alt="Entidad autorizadora">
 </a>
 
 note:
@@ -150,26 +171,81 @@ Sign the certificate? [y/n]:
 
 * Contenidos de  `/etc/openvpn/easy-rsa/2.0/keys`:
 
-| Fichero    | Copiar a            | Propósito       | Secreto|
-|------------|---------------------|-----------------|--------|
-|ca.crt      | Servidor y clientes | Certificados CA | No
-|ca.key      | Máquina que firma   | CA key          | Si
-|dh1024.pem  | Sólo servidor       | Parámetros Diffie Hellman | No
-|server.crt  | Sólo servidor       | Certificado del servidor | No
-|server.key  | Sólo servidor       | Clave servidor        | Sí
-
+<div class="table-responsive">
+<table class="table table-condensed table-hover table-bordered">
+<thead>
+<tr>
+<th>Fichero</th>
+<th>Copiar a</th>
+<th>Propósito</th>
+<th width="160em">Secreto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`ca.crt`</td>
+<td>Todos</td>
+<td>Certificados CA</td>
+<td>No</td>
+</tr>
+<tr>
+<td>`ca.key`</td>
+<td>Firmante</td>
+<td>CA key</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td>`dh1024.pem`</td>
+<td>Servidor</td>
+<td>Parámetros Diffie Hellman</td>
+<td>No</td>
+</tr>
+<tr>
+<td>`server.crt`</td>
+<td>Servidor</td>
+<td>Certificado del servidor</td>
+<td>No</td>
+</tr>
+<tr>
+<td>`server.key`</td>
+<td>Servidor</td>
+<td>Clave servidor</td>
+<td>Sí</td>
+</tr>
+</tbody>
+</table>
+</div>
 
 
 
 ## Gestión de claves (VIII)
 
 * Contenidos de  `/etc/openvpn/easy-rsa/2.0/keys`:
-
-| Fichero    | Copiar a            | Propósito       | Secreto|
-|------------|---------------------|-----------------|--------|
-|clientn.crt | Sólo cliente n      | Certificado cliente n | No
-|clientb.key | Sólo cliente n      | Clave cliente n | Sí
-
+<div class="table-responsive">
+<table class="table table-condensed table-hover table-bordered">
+<thead>
+<tr>
+<th>Fichero</th>
+<th>Copiar a</th>
+<th>Propósito</th>
+<th>Secreto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`clientn.crt`</td>
+<td>Sólo cliente `n`</td>
+<td>Certificado cliente `n`</td>
+<td>No</td>
+</tr>
+<tr>
+<td>`clientn.key`</td>
+<td>Sólo cliente `n`</td>
+<td>Clave cliente `n`</td>
+<td>Sí</td>
+</tr>
+</table>
+</div>
 * Copiamos en el `/etc/openvpn` de cada equipo
 
 

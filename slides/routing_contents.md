@@ -77,7 +77,7 @@ pass to the 10.10.10.0/24 network. You can set up this route with the following 
 ### Opciones (I)
 
 <div class="table-responsive">
-  <table class="table table-condensed  table-hover table-bordered">
+  <table class="table table-condensed table-hover table-bordered">
     <thead>
       <tr>
         <th>Opción</th>
@@ -117,7 +117,7 @@ pass to the 10.10.10.0/24 network. You can set up this route with the following 
       <tr>
         <td>`network`
         </td>
-        <td>Establece mascara de red
+        <td>Establece máscara de red
         </td>
       </tr>
 
@@ -160,7 +160,7 @@ note:
       <tr>
         <td>`reject`
         </td>
-        <td>crea una routa bloqueante (aparecen marcadas como !)
+        <td>crea una ruta bloqueante (aparecen marcadas como !)
         </td>
       </tr>
 
@@ -237,8 +237,8 @@ eth0 Link encap:Ethernet HWaddr 00:A0:CC:24:BA:02
 
 ## ARP (II)
 
-<a class="fancybox" href="img/arp_request.png" data-fancybox-group="gallery" title="Pasos para trabajar con volúmenes lógicos">
-<img height="450px" src="img/arp_request.png" alt="Pasos para trabajar con volúmenes lógicos">
+<a class="fancybox" href="img/arp_request.png" data-fancybox-group="gallery" title="Pasos solicitud ARP">
+<img height="450px" src="img/arp_request.redimensionado75.png" alt="Pasos solicitud ARP">
 </a>
 
 ``` bash
@@ -395,19 +395,19 @@ note:
         </td>
         <td>
            `-i interface`
+        </td>
         <td>
             Restricción de accione a un interfaz
         </td>
-        </td>
       </tr>
- <tr>
+      <tr>
         <td>`--file filename`
         </td>
         <td>
             `-f filename`
+        </td>
         <td>
              Obtiene la información de dirección de un fichero
-        </td>
         </td>
       </tr>
     </tdody>
@@ -506,7 +506,7 @@ tasks.
 </tr>
 <tr>
 <td>`tunnel`</td>
-<td>Muestra o ajusta características del [tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol) features</td>
+<td>Muestra o ajusta características del [tunneling](http://en.wikipedia.org/wiki/Tunneling_protocol)</td>
 </tr>
 <tr>
 <td>`maddr`</td>
